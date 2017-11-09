@@ -414,6 +414,8 @@ int ConfigFile::updateCheckInterval( const QString& connection ) const
 
 bool ConfigFile::skipUpdateCheck( const QString& connection ) const
 {
+    return true;
+/*
     QString con( connection );
     if( connection.isEmpty() ) con = defaultConnection();
 
@@ -422,6 +424,7 @@ bool ConfigFile::skipUpdateCheck( const QString& connection ) const
 
     QVariant value = getPolicySetting(QLatin1String(skipUpdateCheckC), fallback);
     return value.toBool();
+*/
 }
 
 void ConfigFile::setSkipUpdateCheck( bool skip, const QString& connection )
